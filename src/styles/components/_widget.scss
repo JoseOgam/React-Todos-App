@@ -1,0 +1,19 @@
+.widget {
+  background: $off-blue;
+}
+
+.widget-header {
+  background: $off-blue;
+  display: flex;
+  justify-content: space-between;
+  color: $off-white;
+  padding: $m-size;
+}
+
+.widget__message {
+  border-bottom: 1px solid lighten($off-blue, 10%);
+  color: $off-white;
+  margin: 0;
+  padding: $l-size;
+  text-align: center;
+}
