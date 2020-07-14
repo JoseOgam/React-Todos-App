@@ -49,13 +49,15 @@ class Hello extends React.Component {
     return (
       <div>
         <Header title={title} subtitle={subtitle} />
-        <Actions handlepick={this.handlepick} />
-        <Options
-          options={this.state.options}
-          removeAll={this.removeAll}
-          deleteOption={this.deleteOption}
-        />
-        <AddOptions handleAddOption={this.handleAddOption} />
+        <div className="container">
+          <Actions handlepick={this.handlepick} />
+          <Options
+            options={this.state.options}
+            removeAll={this.removeAll}
+            deleteOption={this.deleteOption}
+          />
+          <AddOptions handleAddOption={this.handleAddOption} />
+        </div>
       </div>
     );
   }
