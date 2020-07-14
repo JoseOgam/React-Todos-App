@@ -45,7 +45,7 @@ class Hello extends React.Component {
   }
   render() {
     var title = "My Simple Todos App";
-    var subtitle = "hello react";
+    var subtitle = "focusing everyday";
     return (
       <div>
         <Header title={title} subtitle={subtitle} />
