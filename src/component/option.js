@@ -3,9 +3,9 @@ import React from "react";
 const Option = (props) => {
   return (
     <div className="option">
-      {props.optionText}
+      <p className="option__text"> {props.optionText}</p>
       <button
-        className="button"
+        className="button button--link"
         onClick={(e) => {
           props.deleteItem(props.optionText);
         }}
