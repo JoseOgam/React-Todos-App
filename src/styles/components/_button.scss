@@ -13,10 +13,10 @@
 .button {
   background: purple;
   border: none;
-  color: white;
-  padding: $s-size;
-  font-weight: 500;
   border-bottom: 0.3rem solid darken($purple, 10%);
+  color: white;
+  font-weight: 500;
+  padding: $s-size;
 }
 
 .button--link {
