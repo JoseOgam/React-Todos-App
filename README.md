@@ -1,3 +1,3 @@
 # Todos App project
 
-built with react js
+react-sass app
