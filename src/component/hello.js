@@ -12,7 +12,7 @@ class Hello extends React.Component {
     this.deleteOption = this.deleteOption.bind(this);
     this.removeAll = this.removeAll.bind(this);
     this.state = {
-      options: ["autumn", "spring", "winter", "summer"],
+      options: [],
     };
   }
   deleteOption(data) {

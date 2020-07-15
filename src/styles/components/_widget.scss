@@ -1,9 +1,9 @@
 .widget {
-  background: $off-blue;
+  background: $dark-blue;
 }
 
 .widget-header {
-  background: $off-blue;
+  background: $dark-blue;
   display: flex;
   justify-content: space-between;
   color: $off-white;
@@ -11,7 +11,7 @@
 }
 
 .widget__message {
-  border-bottom: 1px solid lighten($off-blue, 10%);
+  border-bottom: 1px solid lighten($dark-blue, 10%);
   color: $off-white;
   margin: 0;
   padding: $l-size;
