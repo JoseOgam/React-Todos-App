@@ -3,6 +3,7 @@ import Header from "./header";
 import Actions from "./actions";
 import Options from "./options";
 import AddOptions from "./addOptions";
+import Modal from "./modal";
 
 class Hello extends React.Component {
   constructor(props) {
@@ -11,9 +12,18 @@ class Hello extends React.Component {
     this.handleAddOption = this.handleAddOption.bind(this);
     this.deleteOption = this.deleteOption.bind(this);
     this.removeAll = this.removeAll.bind(this);
+    this.clearOption = this.clearOption.bind(this);
     this.state = {
       options: [],
+      selectedOption: undefined,
     };
+  }
+  clearOption() {
+    this.setState(() => {
+      return {
+        selectedOption: undefined,
+      };
+    });
   }
   deleteOption(data) {
     this.setState((prevState) => ({
@@ -29,7 +39,11 @@ class Hello extends React.Component {
   handlepick() {
     var randomTodo = Math.floor(Math.random() * this.state.options.length);
     var option = this.state.options[randomTodo];
-    alert(option);
+    this.setState(() => {
+      return {
+        selectedOption: option,
+      };
+    });
   }
   handleAddOption(option) {
     if (!option) {
@@ -50,7 +64,10 @@ class Hello extends React.Component {
       <div>
         <Header title={title} subtitle={subtitle} />
         <div className="container">
-          <Actions handlepick={this.handlepick} />
+          <Actions
+            handlepick={this.handlepick}
+            hasOptions={this.state.options.length > 0}
+          />
           <div className="widget">
             <Options
               options={this.state.options}
@@ -58,6 +75,10 @@ class Hello extends React.Component {
               deleteOption={this.deleteOption}
             />
             <AddOptions handleAddOption={this.handleAddOption} />
+            <Modal
+              selectOption={this.state.selectedOption}
+              clearOption={this.clearOption}
+            />
           </div>
         </div>
       </div>
